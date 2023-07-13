@@ -12,7 +12,7 @@
 % Other codes will load this table and run analysis on it
 
 %% Load the table
-data_guide_name = 'OSProjectMetaData2.xlsx';
+data_guide_name = 'OSProjectMetaData3.xlsx';
 
 % Detect import options for the data guide spreadsheet
 opts = detectImportOptions(data_guide_name);
@@ -180,7 +180,7 @@ for i = 1:totalNeurons
 %     neuronTable.OSIsig(i) = idx/1000;
 end
 
-neuronTable.OSrealThetaCorr = neuronTable.OSrealThetaCorr + deg2rad(neuronTable.degCorr);
+neuronTable.OSrealThetaCorr = neuronTable.OSrealTheta + deg2rad(neuronTable.degCorr);
 
 % %classify all non-BAD hb9 and drd4 cells as ON-OFF cells
 % neuronTable.cellID(strcmp(neuronTable.GFPid, 'hb9')==1 & strcmp(neuronTable.cellID,'BAD')==0) = 'ON-OFF';
